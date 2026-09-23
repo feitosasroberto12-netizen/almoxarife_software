@@ -1,0 +1,926 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#02000d", "tertiary-fixed-dim": "#ffb4a7", "tertiary-fixed": "#ffdad4", "on-tertiary-container": "#f14530", "tertiary": "#070000", "surface-tint": "#6351a7", "surface-canvas": "#F8FAFC", "surface-container-high": "#dee8ff", "on-error-container": "#93000a", "on-primary-fixed": "#1e0060", "surface-dim": "#cfdaf2", "brand-alert-red": "#D73220", "brand-navy": "#1F0062", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#ccbeff", "surface-container": "#e7eeff", "on-primary-fixed-variant": "#4b388d", "on-surface-variant": "#484551", "on-surface": "#111c2d", "secondary-fixed": "#cce5ff", "brand-blue-active": "#0B78B3", "on-tertiary": "#ffffff", "surface-card": "#FFFFFF", "on-error": "#ffffff", "on-primary-container": "#8977d1", "on-tertiary-fixed": "#400100", "surface-container-low": "#f0f3ff", "border-subtle": "#E2E8F0", "on-secondary": "#ffffff", "secondary-fixed-dim": "#92ccff", "outline-variant": "#cac4d3", "status-warning": "#EAB308", "secondary": "#006497", "on-tertiary-fixed-variant": "#920500", "background": "#f9f9ff", "inverse-surface": "#263143", "surface": "#f9f9ff", "on-primary": "#ffffff", "secondary-container": "#6fc0ff", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ecf1ff", "surface-cream": "#F9ECE5", "brand-burgundy": "#68150A", "tertiary-container": "#420100", "inverse-primary": "#ccbeff", "surface-bright": "#f9f9ff", "surface-variant": "#d8e3fb", "error-container": "#ffdad6", "primary-container": "#1f0062", "status-success": "#059669", "surface-container-lowest": "#ffffff", "outline": "#797582", "on-background": "#111c2d", "primary-fixed": "#e7deff", "error": "#ba1a1a", "surface-container-highest": "#d8e3fb", "on-secondary-container": "#004d76" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "space-2xl": "3rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Poppins"], "body-md": ["Poppins"], "headline-md": ["Poppins"], "label-md": ["Poppins"], "display-lg-mobile": ["Poppins"], "title-md": ["Poppins"], "label-sm": ["Poppins"], "label-lg": ["Poppins"], "body-lg": ["Poppins"], "title-lg": ["Poppins"], "headline-sm": ["Poppins"], "code-mono": ["JetBrains Mono"], "headline-lg-mobile": ["Poppins"], "display-lg": ["Poppins"], "headline-lg": ["Poppins"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "30px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "title-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "title-lg": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "code-mono": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Logo Corporativo" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VvL7DFueA5jjjsnDOavZ_c3m88WZDAucbSOpbgQ-y06kpHK3E9erB-dPiYk0DPXECnoHQnqtzp9BKZj09SDs9taQLSfNQwG5JpWgl4OpqTlKCcoFDQi6F1VyniI9SHN_bkSjZBxpzmvO0J3nzxO0QrgDi_-EwSZT4MbpeoQunP1W7ets4xqy9fES_L44G5YekQFUCtEMaFCaXPrO4q9C_1hpAsoy9K0uUvG-CW9nlCqDhzLDOOEMa13b8pvKC8g_CAL3MODcv6ZA"><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-brand-navy truncate">Software &amp; Soluções</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Almoxarifado &amp; Gestão</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Menu Principal</span></div><nav class="flex flex-col gap-space-2xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-title-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-executivo" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span class="font-body-md text-body-md">Dashboard Executivo</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="gestao-de-insumos-e-lotes" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Gestão de Insumos &amp; Lotes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="movimentacoes-de-estoque" href="#"><span class="material-symbols-outlined text-[20px]">swap_horizontal_circle</span><span class="font-body-md text-body-md">Movimentações de Estoque</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="auditoria-e-relatorios" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Auditoria &amp; Relatórios</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">domain</span><select class="bg-transparent font-label-md text-label-md text-on-surface outline-none cursor-pointer pr-space-xs"><option value="all">Todos os Departamentos</option><option value="eng">Engenharia de Software</option><option value="ops">Operações &amp; Infraestrutura</option><option value="fin">Diretoria &amp; Controladoria</option><option value="adm">Administrativo / Almoxarifado</option></select></div><div class="hidden lg:flex items-center gap-space-2xs bg-surface-cream px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-brand-burgundy text-[16px]">shield</span><span class="font-label-sm text-label-sm text-brand-burgundy">Governança Corporativa</span></div></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Notification / Top Alert Strip -->
+<div class="px-space-xl pt-space-lg pb-space-sm">
+<div class="bg-surface-cream text-brand-burgundy rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-alert-red"></div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-brand-alert-red text-[24px]">crisis_alert</span>
+<div><span class="font-title-md text-title-md text-brand-burgundy font-semibold">14 lotes com vencimento em até 30 dias</span></div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto">
+<button class="px-space-sm py-space-xs bg-brand-navy text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 transition-all flex items-center gap-space-2xs shadow-sm" onclick="filterByExpiration('critico')" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+          Filtrar Críticos
+        </button>
+</div>
+</div>
+</div>
+<!-- Command Center: Filters & Registration Trigger -->
+<div class="px-space-xl py-space-sm">
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search & Filters Group -->
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<!-- Live Search Input -->
+<div class="relative min-w-[280px] flex-1">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-brand-blue-active text-[20px]">qr_code_scanner</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md focus:bg-surface-card focus:shadow-md outline-none transition-all" id="searchInput" placeholder="Buscar por código SKU, insumo ou lote..." type="text">
+</div>
+<!-- Category Dropdown -->
+<div class="relative">
+<select class="h-11 px-space-md bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md outline-none cursor-pointer hover:bg-surface-container transition-colors appearance-none pr-8" id="categoryFilter">
+<option value="all">Todas as Categorias</option>
+<option value="ti">Materiais de TI</option>
+<option value="escritorio">Material de Escritório</option>
+<option value="epis">EPIs &amp; Segurança</option>
+<option value="limpeza">Higiene &amp; Limpeza</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Shelf Life Status Filter -->
+<div class="relative">
+<select class="h-11 px-space-md bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md outline-none cursor-pointer hover:bg-surface-container transition-colors appearance-none pr-8" id="validityFilter">
+<option value="all">Status de Validade (Todos)</option>
+<option value="critico">Crítico (&lt; 30 dias)</option>
+<option value="urgente">Urgente (&lt; 15 dias)</option>
+<option value="atencao">Atenção (&lt; 60 dias)</option>
+<option value="regular">Regular / Seguro</option>
+<option value="vencido">Vencido</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">filter_alt</span>
+</div>
+<!-- Quick Reset -->
+<button class="h-11 px-space-sm flex items-center justify-center text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high rounded-lg transition-colors" id="resetFilters" title="Limpar Filtros">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+<!-- Action Button Trigger -->
+<div class="flex items-center gap-space-sm justify-end">
+<button class="h-11 px-space-lg bg-brand-navy hover:bg-primary text-on-primary rounded-lg font-title-md text-title-md shadow-md hover:shadow-lg transition-all flex items-center gap-space-xs" id="openModalBtn">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+<span class="">+ Cadastrar Novo Insumo / Lote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Inventory Overview KPI Cards -->
+<div class="px-space-xl py-space-sm grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Total Insumos -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-brand-navy"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Inventário Geral</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-space-2xs block">184</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-brand-navy">
+<span class="material-symbols-outlined text-[22px]">category</span>
+</div>
+</div>
+
+</div>
+<!-- Active Batches -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-brand-blue-active"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Lotes Ativos</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-space-2xs block">420</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-brand-blue-active">
+<span class="material-symbols-outlined text-[22px]">layers</span>
+</div>
+</div>
+
+</div>
+<!-- Critical Validity Alert -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-brand-alert-red"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-brand-alert-red font-semibold uppercase tracking-wider block">Alerta de Validade</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-headline-lg text-headline-lg text-brand-alert-red font-bold tracking-tight">14</span>
+<span class="font-label-md text-label-md text-on-surface-variant">lotes &lt; 30d</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-cream flex items-center justify-center text-brand-alert-red animate-pulse">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+</div>
+
+</div>
+<!-- Below Minimum Stock -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-status-warning"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Risco de Ruptura</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">7</span>
+<span class="font-label-md text-label-md text-on-surface-variant">abaixo do mín.</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined text-[22px]">production_quantity_limits</span>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Split Main Workplace: Inventory Table & Governance Rule Assistant -->
+<div class="px-space-xl py-space-sm mb-space-2xl grid grid-cols-1 gap-space-md items-start">
+<!-- Main Inventory Grid (9 Cols on xl) -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Action Bar -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-lg text-title-lg text-on-surface">Lotes em Monitoramento Contínuo</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-on-surface-variant font-code-mono text-code-mono text-[11px]">8 de 420</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-2xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+            Exportar CSV
+          </button>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-2xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">print</span>
+            Etiquetas ZPL
+          </button>
+</div>
+</div>
+<!-- Data Table Responsive Shell -->
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="inventoryTable">
+<thead>
+<tr class="bg-surface-canvas text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider"><th class="py-3 px-4 font-semibold">Insumo</th><th class="py-3 px-3 font-semibold">Categoria</th><th class="py-3 px-3 font-semibold">Lote</th><th class="py-3 px-3 font-semibold">Depto</th><th class="py-3 px-3 font-semibold">Estoque</th><th class="py-3 px-3 font-semibold">Validade</th><th class="py-3 px-3 font-semibold text-right">Custo Un.</th><th class="py-3 px-4 text-center font-semibold">Ações</th></tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y-0" id="tableBody">
+<!-- Row 1: Crítico < 15 dias (Pulsing Red) -->
+<tr class="bg-surface-card hover:bg-surface-container-low transition-colors relative" data-category="limpeza" data-validity="urgente">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-brand-alert-red rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-brand-alert-red">
+<span class="material-symbols-outlined text-[18px]">sanitizer</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Álcool Isopropílico 99.8% 1L</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: TI-CHM-9021</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Limpeza/TI</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-88421</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Engenharia</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-brand-alert-red">4 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 15</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-brand-alert-red h-full rounded-full" style="width: 26%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-error-container text-brand-alert-red font-label-sm text-label-sm font-bold shadow-sm animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-alert-red"></span>
+                  8 dias (24/10/24)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 38,50</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-88421', 'Álcool Isopropílico 99.8% 1L', 'Engenharia', 4)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-88421', 'Álcool Isopropílico 99.8% 1L', 4)" title="Registrar Baixa / Perda">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Alerta < 30 dias (Laranja) -->
+<tr class="bg-surface-canvas/50 hover:bg-surface-container-low transition-colors" data-category="epis" data-validity="critico">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-status-warning rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined text-[18px]">masks</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Respirador Semi-Facial N95 c/ Filtro</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: EPI-RSP-304</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">EPIs</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-77190</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Operações</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-on-surface">45 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 30</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 80%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-amber-50 text-status-warning font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  22 dias (08/11/24)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 14,20</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-77190', 'Respirador N95 c/ Filtro', 'Operações', 45)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-77190', 'Respirador N95 c/ Filtro', 45)" title="Registrar Baixa / Perda">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Regular / Seguro (Verde) -->
+<tr class="bg-surface-card hover:bg-surface-container-low transition-colors" data-category="ti" data-validity="regular">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-status-success rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-success">
+<span class="material-symbols-outlined text-[18px]">cable</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Cabo Patch Cord Cat6 Furukawa 2.5m</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: TI-CAB-1092</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">TI</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-99201</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Infraestrutura</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-on-surface">120 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 40</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-emerald-50 text-status-success font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  410 dias (15/12/25)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 18,90</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-99201', 'Cabo Patch Cord Cat6 2.5m', 'Infraestrutura', 120)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-99201', 'Cabo Patch Cord Cat6 2.5m', 120)" title="Registrar Baixa / Perda">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Vencido -->
+<tr class="bg-surface-canvas/50 hover:bg-surface-container-low transition-colors" data-category="limpeza" data-validity="vencido">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-brand-burgundy rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-brand-alert-red">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-brand-burgundy truncate">Kit Limpa Telas Óptico Especializado</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: LIM-OPT-088</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Limpeza</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-65100</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Almoxarifado</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-brand-alert-red">12 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 10</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-brand-alert-red h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-brand-burgundy text-on-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                  Vencido há 4 dias
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 22,00</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-outline opacity-40 cursor-not-allowed" disabled="" title="Não é possível remanejar lote vencido">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-on-error bg-brand-alert-red hover:bg-brand-burgundy rounded-lg transition-colors shadow-sm" onclick="openLossModal('#LT-65100', 'Kit Limpa Telas Óptico', 12)" title="Descarte Obrigatório / Auditoria">
+<span class="material-symbols-outlined text-[18px]">auto_delete</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Atenção < 60 dias -->
+<tr class="bg-surface-card hover:bg-surface-container-low transition-colors" data-category="escritorio" data-validity="atencao">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-status-warning rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Toner HP Laser Monocromático 105A</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: ESC-TON-4410</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Escritório</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-83902</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Controladoria</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-status-warning">6 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 8</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-status-warning h-full rounded-full" style="width: 75%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-amber-50 text-status-warning font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  48 dias (03/12/24)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 289,00</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-83902', 'Toner HP Laser 105A', 'Controladoria', 6)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-83902', 'Toner HP Laser 105A', 6)" title="Registrar Baixa">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Regular / Seguro -->
+<tr class="bg-surface-canvas/50 hover:bg-surface-container-low transition-colors" data-category="epis" data-validity="regular">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-status-success rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-success">
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Óculos de Proteção UV Anti-Risco</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: EPI-OCL-500</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">EPIs</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-91104</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Almoxarifado</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-on-surface">50 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 25</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-emerald-50 text-status-success font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  720 dias (01/10/26)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 11,50</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-91104', 'Óculos de Proteção UV', 'Almoxarifado', 50)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-91104', 'Óculos de Proteção UV', 50)" title="Registrar Baixa">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Alerta < 30 dias -->
+<tr class="bg-surface-card hover:bg-surface-container-low transition-colors" data-category="ti" data-validity="critico">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-brand-alert-red rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-brand-alert-red">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Pasta Térmica Prata Arctic Silver 5 3.5g</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: TI-PAS-881</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">TI</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-76500</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Engenharia</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-on-surface">18 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 10</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-amber-50 text-brand-alert-red font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-alert-red"></span>
+                  19 dias (05/11/24)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 54,00</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-76500', 'Pasta Térmica Arctic Silver 5', 'Engenharia', 18)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-76500', 'Pasta Térmica Arctic Silver 5', 18)" title="Registrar Baixa">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Regular -->
+<tr class="bg-surface-canvas/50 hover:bg-surface-container-low transition-colors" data-category="escritorio" data-validity="regular">
+<td class="py-3 px-4 flex items-center gap-space-sm">
+<div class="w-1.5 self-stretch bg-status-success rounded-full mr-1"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-success">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-title-md text-on-surface truncate">Papel Sulfite A4 Report 75g (Resma 500fls)</div>
+<div class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">SKU: ESC-PAP-010</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Escritório</span>
+</td>
+<td class="py-3 px-3 font-code-mono text-code-mono text-brand-navy font-semibold">#LT-55410</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">Almoxarifado</span>
+</td>
+<td class="py-3 px-3 min-w-[140px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-code-mono text-code-mono text-[12px] font-bold text-on-surface">85 res</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mín: 30</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-emerald-50 text-status-success font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  900 dias (28/04/27)
+                </div>
+</td>
+<td class="py-3 px-3 text-right font-code-mono text-code-mono font-medium">R$ 27,90</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 text-brand-blue-active hover:bg-surface-container rounded-lg transition-colors" onclick="openTransferDrawer('#LT-55410', 'Papel Sulfite A4 Report 75g', 'Almoxarifado', 85)" title="Remanejar Departamento">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+<button class="p-1.5 text-brand-alert-red hover:bg-surface-cream rounded-lg transition-colors" onclick="openLossModal('#LT-55410', 'Papel Sulfite A4 Report 75g', 85)" title="Registrar Baixa">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Histórico do Lote">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Bar -->
+<div class="p-space-md bg-surface-canvas flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Exibindo 1–8 de 420 lotes</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-brand-navy text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center justify-center shadow-sm">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center justify-center shadow-sm">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center justify-center shadow-sm">53</button>
+<button class="w-8 h-8 rounded-lg bg-surface-card text-on-surface-variant hover:text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Governance & Instructions Aside (3 Cols on xl) -->
+
+</div>
+<!-- MODAL: Cadastrar Novo Insumo / Lote -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm flex items-center justify-center p-space-md opacity-0 pointer-events-none transition-opacity duration-200" id="registerModal">
+<div class="bg-surface-card rounded-xl shadow-xl w-full max-w-2xl overflow-hidden transform scale-95 transition-transform duration-200" id="modalContainer">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-brand-navy text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">add_box</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-brand-navy">Cadastrar Novo Insumo / Lote</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Defina os parâmetros de rastreabilidade, ponto de reposição e prazo de validade.</p>
+</div>
+</div>
+<button class="p-space-xs text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" id="closeModalBtn">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Modal Body Form -->
+<form class="p-space-lg flex flex-col gap-space-md max-h-[75vh] overflow-y-auto" id="newSupplyForm" onsubmit="handleFormSubmit(event)">
+<!-- Step 1: Base Supply Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Código SKU / Identificador *</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-blue-active text-[18px]">barcode</span>
+<input class="w-full h-11 pl-9 pr-3 bg-surface-canvas text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" placeholder="Ex: TI-KEY-4091" required="" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Nome do Insumo *</label>
+<input class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" placeholder="Ex: Cabo de Rede Blindado Cat7 10m" required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Categoria *</label>
+<select class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none cursor-pointer focus:bg-surface-card focus:shadow-md transition-all" required="">
+<option value="ti">Materiais de TI</option>
+<option value="escritorio">Material de Escritório</option>
+<option value="epis">EPIs &amp; Segurança</option>
+<option value="limpeza">Higiene &amp; Limpeza</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Número do Lote *</label>
+<input class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" placeholder="Ex: #LT-10928" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Departamento Alocado *</label>
+<select class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none cursor-pointer focus:bg-surface-card focus:shadow-md transition-all" required="">
+<option value="almoxarifado">Almoxarifado Geral</option>
+<option value="eng">Engenharia de Software</option>
+<option value="ops">Operações &amp; Infraestrutura</option>
+<option value="fin">Diretoria &amp; Controladoria</option>
+</select>
+</div>
+</div>
+<!-- Step 2: Quantities, Minimuns & Costs -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Quantidade Inicial *</label>
+<input class="w-full h-11 px-3 bg-surface-card text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:shadow-md transition-all" min="1" placeholder="100" required="" type="number">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Estoque Mínimo (RF02) *</label>
+<input class="w-full h-11 px-3 bg-surface-card text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:shadow-md transition-all" min="1" placeholder="20" required="" type="number">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Custo Unitário (R$) *</label>
+<input class="w-full h-11 px-3 bg-surface-card text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:shadow-md transition-all" placeholder="24,50" required="" type="text">
+</div>
+</div>
+<!-- Step 3: Shelf Life Control (RF04) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Data de Fabricação</label>
+<input class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" type="date">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-brand-alert-red uppercase tracking-wider font-semibold">Data de Validade (Expiração) *</label>
+<input class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" required="" type="date">
+</div>
+</div>
+<!-- Compliance Check -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-cream rounded-lg">
+<input class="mt-1 w-4 h-4 rounded text-brand-navy accent-brand-navy cursor-pointer" id="complianceCheck" required="" type="checkbox">
+<label class="font-body-sm text-body-sm text-brand-burgundy cursor-pointer" for="complianceCheck">
+            Confirmo que as especificações deste lote cumprem as diretrizes de estocagem preventiva e os registros de rastreabilidade do protocolo corporativo RF04.
+          </label>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-title-md text-title-md transition-colors" id="cancelModalBtn" type="button">
+            Cancelar
+          </button>
+<button class="px-space-lg py-space-sm rounded-lg bg-brand-navy text-on-primary font-title-md text-title-md hover:bg-primary shadow-md transition-all flex items-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+            Registrar Lote
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- SLIDE-OVER DRAWER: Remanejar Departamento (RF04) -->
+<div class="fixed inset-0 z-50 bg-primary/30 backdrop-blur-sm pointer-events-none opacity-0 transition-opacity duration-200" id="transferDrawer">
+<div class="fixed right-0 top-0 bottom-0 w-full max-w-md bg-surface-card shadow-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="drawerPanel">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-brand-blue-active text-[24px]">drive_file_move</span>
+<div>
+<h3 class="font-title-lg text-title-lg text-brand-navy">Remanejamento Preventivo</h3>
+<span class="font-code-mono text-code-mono text-on-surface-variant text-[12px]" id="drawerLotBadge">#LT-XXXXX</span>
+</div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded-lg" onclick="closeTransferDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Content -->
+<div class="p-space-lg flex-1 overflow-y-auto flex flex-col gap-space-md">
+<div class="p-space-md bg-surface-cream rounded-xl">
+<span class="font-label-sm text-label-sm text-brand-burgundy uppercase tracking-wider block font-bold">Insumo Selecionado</span>
+<span class="font-title-md text-title-md text-brand-burgundy mt-1 block" id="drawerItemName">---</span>
+<div class="flex justify-between items-center mt-space-sm pt-space-xs">
+<span class="font-body-sm text-body-sm text-brand-burgundy/90">Lotação Atual:</span>
+<span class="font-label-md text-label-md bg-surface-card px-2 py-0.5 rounded font-semibold text-on-surface" id="drawerSourceDept">---</span>
+</div>
+<div class="flex justify-between items-center mt-space-xs">
+<span class="font-body-sm text-body-sm text-brand-burgundy/90">Saldo Disponível:</span>
+<span class="font-code-mono text-code-mono font-bold text-brand-alert-red" id="drawerLotQty">0 un</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-md" id="transferForm" onsubmit="handleTransferSubmit(event)">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Novo Departamento de Destino *</label>
+<select class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none cursor-pointer focus:bg-surface-card focus:shadow-md transition-all" required="">
+<option value="">Selecione o destino de alto giro...</option>
+<option value="eng">Engenharia de Software (Consumo Rápido)</option>
+<option value="ops">Operações &amp; Infraestrutura</option>
+<option value="fin">Diretoria &amp; Controladoria</option>
+<option value="adm">Administrativo / Almoxarifado Central</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Quantidade a Remanejar *</label>
+<input class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" id="transferInputQty" min="1" required="" type="number">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Motivação Operacional (RF04) *</label>
+<textarea class="w-full p-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" placeholder="Ex: Consumo programado para substituição preventiva em massa antes do término da validade do lote." required="" rows="3"></textarea>
+</div>
+<button class="mt-space-sm w-full py-space-sm bg-brand-blue-active text-on-primary font-title-md text-title-md rounded-lg hover:opacity-90 shadow-md transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+            Confirmar Remanejamento
+          </button>
+</form>
+</div>
+<!-- Drawer Footer -->
+<div class="p-space-md bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-success">security</span>
+          Ação registrada com Hash no livro de auditoria contábil.
+        </span>
+</div>
+</div>
+</div>
+<!-- MODAL: Baixa / Registro de Perda Auditada -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm flex items-center justify-center p-space-md opacity-0 pointer-events-none transition-opacity duration-200" id="lossModal">
+<div class="bg-surface-card rounded-xl shadow-xl w-full max-w-lg overflow-hidden transform scale-95 transition-transform duration-200">
+<div class="p-space-lg bg-surface-cream flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-brand-alert-red text-on-primary flex items-center justify-center"><span class="font-title-md text-title-md text-brand-burgundy font-semibold">14 lotes com vencimento em até 30 dias</span></div>
+<div><span class="font-title-md text-title-md text-brand-burgundy font-semibold">14 lotes com vencimento em até 30 dias</span></div>
+</div>
+<button class="p-space-xs text-brand-burgundy hover:bg-surface-container rounded-lg" onclick="closeLossModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="p-space-lg flex flex-col gap-space-md" onsubmit="handleLossSubmit(event)">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Esta ação deduzirá permanentemente o quantitativo do estoque e classificará o item como perda para apuração fiscal no demonstrativo DRE.
+        </p>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Tipo de Ocorrência *</label>
+<select class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none cursor-pointer focus:bg-surface-card focus:shadow-md transition-all" required="">
+<option value="vencido">LOSS_EXPIRED: Validade Expirada (Inutilizável)</option>
+<option value="avariado">LOSS_DAMAGED: Insumo Avariado no Manuseio</option>
+<option value="extravio">LOSS_MISSING: Divergência de Inventário Físico</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Quantidade a Baixar *</label>
+<input class="w-full h-11 px-3 bg-surface-canvas text-on-surface font-code-mono text-code-mono rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" id="lossInputQty" min="1" required="" type="number">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Parecer do Auditor Responsável *</label>
+<textarea class="w-full p-3 bg-surface-canvas text-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-card focus:shadow-md transition-all" placeholder="Descreva os fatos e a autorização para baixa física e contábil..." required="" rows="3"></textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface-variant font-title-md text-title-md" onclick="closeLossModal()" type="button">
+            Cancelar
+          </button>
+<button class="px-space-lg py-space-sm rounded-lg bg-brand-alert-red text-on-primary font-title-md text-title-md hover:bg-brand-burgundy shadow-md transition-all" type="submit">
+            Registrar Baixa Auditada
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Micro-Interactions & Real-Time Filter Logic -->
+<script>
+    // Elements & State
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const validityFilter = document.getElementById('validityFilter');
+    const resetFiltersBtn = document.getElementById('resetFilters');
+    const tableBody = document.getElementById('tableBody');
+    const rows = tableBody.querySelectorAll('tr');
+
+    // Filter Trigger Function
+    function applyFilters() {
+      const term = searchInput.value.toLowerCase().trim();
+      const cat = categoryFilter.value;
+      const val = validityFilter.value;
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rowCat = row.getAttribute('data-category');
+        const rowVal = row.getAttribute('data-validity');
+
+        const matchesSearch = term === '' || text.includes(term);
+        const matchesCategory = cat === 'all' || rowCat === cat;
+        const matchesValidity = val === 'all' ||
+          (val === 'critico' && (rowVal === 'critico' || rowVal === 'urgente')) ||
+          rowVal === val;
+
+        if (matchesSearch && matchesCategory && matchesValidity) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    categoryFilter.addEventListener('change', applyFilters);
+    validityFilter.addEventListener('change', applyFilters);
+
+    resetFiltersBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      categoryFilter.value = 'all';
+      validityFilter.value = 'all';
+      applyFilters();
+    });
+
+    function filterByExpiration(status) {
+      validityFilter.value = status;
+      applyFilters();
+    }
+
+    // Modal Control: Register New Batch
+    const registerModal = document.getElementById('registerModal');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+
+    function toggleModal(open) {
+      if (open) {
+        registerModal.classList.remove('opacity-0', 'pointer-events-none');
+        registerModal.querySelector('#modalContainer').classList.remove('scale-95');
+        registerModal.querySelector('#modalContainer').classList.add('scale-100');
+      } else {
+        registerModal.classList.add('opacity-0', 'pointer-events-none');
+        registerModal.querySelector('#modalContainer').classList.remove('scale-100');
+        registerModal.querySelector('#modalContainer').classList.add('scale-95');
+      }
+    }
+
+    openModalBtn.addEventListener('click', () => toggleModal(true));
+    closeModalBtn.addEventListener('click', () => toggleModal(false));
+    cancelModalBtn.addEventListener('click', () => toggleModal(false));
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Novo Insumo e Lote registrados com sucesso! Rastreabilidade configurada conforme RF02 e RF04.');
+      toggleModal(false);
+      e.target.reset();
+    }
+
+    // Drawer Control: Transfer Supply (RF04)
+    const transferDrawer = document.getElementById('transferDrawer');
+    const drawerPanel = document.getElementById('drawerPanel');
+    const drawerLotBadge = document.getElementById('drawerLotBadge');
+    const drawerItemName = document.getElementById('drawerItemName');
+    const drawerSourceDept = document.getElementById('drawerSourceDept');
+    const drawerLotQty = document.getElementById('drawerLotQty');
+    const transferInputQty = document.getElementById('transferInputQty');
+
+    function openTransferDrawer(lot, name, dept, qty) {
+      drawerLotBadge.textContent = lot;
+      drawerItemName.textContent = name;
+      drawerSourceDept.textContent = dept;
+      drawerLotQty.textContent = qty + ' un';
+      transferInputQty.max = qty;
+      transferInputQty.value = qty;
+
+      transferDrawer.classList.remove('opacity-0', 'pointer-events-none');
+      drawerPanel.classList.remove('translate-x-full');
+    }
+
+    function closeTransferDrawer() {
+      drawerPanel.classList.add('translate-x-full');
+      transferDrawer.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    function handleTransferSubmit(e) {
+      e.preventDefault();
+      alert('Remanejamento preventivo do lote efetuado com sucesso! Ordem de movimentação despachada no almoxarifado.');
+      closeTransferDrawer();
+      e.target.reset();
+    }
+
+    // Modal Control: Loss Audit
+    const lossModal = document.getElementById('lossModal');
+    const lossLotBadge = document.getElementById('lossLotBadge');
+    const lossInputQty = document.getElementById('lossInputQty');
+
+    function openLossModal(lot, name, qty) {
+      lossLotBadge.textContent = lot + ' - ' + name;
+      lossInputQty.max = qty;
+      lossInputQty.value = qty;
+      lossModal.classList.remove('opacity-0', 'pointer-events-none');
+      lossModal.querySelector('div').classList.remove('scale-95');
+    }
+
+    function closeLossModal() {
+      lossModal.classList.add('opacity-0', 'pointer-events-none');
+      lossModal.querySelector('div').classList.add('scale-95');
+    }
+
+    function handleLossSubmit(e) {
+      e.preventDefault();
+      alert('Baixa por perda cadastrada no log de auditoria fiscal.');
+      closeLossModal();
+      e.target.reset();
+    }
+  </script>
+</div></main></div>
+
+</body></html>

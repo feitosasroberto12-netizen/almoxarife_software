@@ -1,0 +1,808 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#02000d", "tertiary-fixed-dim": "#ffb4a7", "tertiary-fixed": "#ffdad4", "on-tertiary-container": "#f14530", "tertiary": "#070000", "surface-tint": "#6351a7", "surface-canvas": "#F8FAFC", "surface-container-high": "#dee8ff", "on-error-container": "#93000a", "on-primary-fixed": "#1e0060", "surface-dim": "#cfdaf2", "brand-alert-red": "#D73220", "brand-navy": "#1F0062", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#ccbeff", "surface-container": "#e7eeff", "on-primary-fixed-variant": "#4b388d", "on-surface-variant": "#484551", "on-surface": "#111c2d", "secondary-fixed": "#cce5ff", "brand-blue-active": "#0B78B3", "on-tertiary": "#ffffff", "surface-card": "#FFFFFF", "on-error": "#ffffff", "on-primary-container": "#8977d1", "on-tertiary-fixed": "#400100", "surface-container-low": "#f0f3ff", "border-subtle": "#E2E8F0", "on-secondary": "#ffffff", "secondary-fixed-dim": "#92ccff", "outline-variant": "#cac4d3", "status-warning": "#EAB308", "secondary": "#006497", "on-tertiary-fixed-variant": "#920500", "background": "#f9f9ff", "inverse-surface": "#263143", "surface": "#f9f9ff", "on-primary": "#ffffff", "secondary-container": "#6fc0ff", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ecf1ff", "surface-cream": "#F9ECE5", "brand-burgundy": "#68150A", "tertiary-container": "#420100", "inverse-primary": "#ccbeff", "surface-bright": "#f9f9ff", "surface-variant": "#d8e3fb", "error-container": "#ffdad6", "primary-container": "#1f0062", "status-success": "#059669", "surface-container-lowest": "#ffffff", "outline": "#797582", "on-background": "#111c2d", "primary-fixed": "#e7deff", "error": "#ba1a1a", "surface-container-highest": "#d8e3fb", "on-secondary-container": "#004d76" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "space-2xl": "3rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Poppins"], "body-md": ["Poppins"], "headline-md": ["Poppins"], "label-md": ["Poppins"], "display-lg-mobile": ["Poppins"], "title-md": ["Poppins"], "label-sm": ["Poppins"], "label-lg": ["Poppins"], "body-lg": ["Poppins"], "title-lg": ["Poppins"], "headline-sm": ["Poppins"], "code-mono": ["JetBrains Mono"], "headline-lg-mobile": ["Poppins"], "display-lg": ["Poppins"], "headline-lg": ["Poppins"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "30px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "title-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "title-lg": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "code-mono": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Logo Corporativo" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VvL7DFueA5jjjsnDOavZ_c3m88WZDAucbSOpbgQ-y06kpHK3E9erB-dPiYk0DPXECnoHQnqtzp9BKZj09SDs9taQLSfNQwG5JpWgl4OpqTlKCcoFDQi6F1VyniI9SHN_bkSjZBxpzmvO0J3nzxO0QrgDi_-EwSZT4MbpeoQunP1W7ets4xqy9fES_L44G5YekQFUCtEMaFCaXPrO4q9C_1hpAsoy9K0uUvG-CW9nlCqDhzLDOOEMa13b8pvKC8g_CAL3MODcv6ZA"><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-brand-navy truncate">Software &amp; Soluções</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Almoxarifado &amp; Gestão</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Menu Principal</span></div><nav class="flex flex-col gap-space-2xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-title-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-executivo" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span class="font-body-md text-body-md">Dashboard Executivo</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="gestao-de-insumos-e-lotes" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Gestão de Insumos &amp; Lotes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="movimentacoes-de-estoque" href="#"><span class="material-symbols-outlined text-[20px]">swap_horizontal_circle</span><span class="font-body-md text-body-md">Movimentações de Estoque</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="auditoria-e-relatorios" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Auditoria &amp; Relatórios</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">domain</span><select class="bg-transparent font-label-md text-label-md text-on-surface outline-none cursor-pointer pr-space-xs"><option value="all">Todos os Departamentos</option><option value="eng">Engenharia de Software</option><option value="ops">Operações &amp; Infraestrutura</option><option value="fin">Diretoria &amp; Controladoria</option><option value="adm">Administrativo / Almoxarifado</option></select></div><div class="hidden lg:flex items-center gap-space-2xs bg-surface-cream px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-brand-burgundy text-[16px]">shield</span><span class="font-label-sm text-label-sm text-brand-burgundy">Governança Corporativa</span></div></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-header Breadcrumb / Audit Context Bar -->
+<div class="w-full bg-surface-container-lowest px-space-xl py-space-md shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-[24px]">policy</span>
+</div>
+<div>
+
+<h1 class="font-headline-md text-headline-md text-on-surface">Auditoria &amp; Rastreamento de Desvios</h1>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary font-title-md text-title-md hover:bg-brand-navy shadow-sm transition-all" id="btnExportPdf" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span class="">Relatório Diretoria (PDF)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container shadow-sm transition-all" id="btnExportCsv" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+<span class="">Exportar CSV / Excel</span>
+</button>
+
+</div>
+</div>
+</div>
+<!-- Operational Filter Strip -->
+<div class="w-full px-space-xl py-space-md bg-surface-canvas">
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<!-- Perspective switch & Depts -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex p-1 bg-surface-container-low rounded-lg">
+<button class="px-space-md py-1.5 rounded-md font-title-md text-title-md bg-primary-container text-on-primary shadow-sm transition-all" id="tabCorporate" onclick="setAuditView('corporate')" type="button">
+            Consolidado Corporativo
+          </button>
+<button class="px-space-md py-1.5 rounded-md font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" id="tabDepartment" onclick="setAuditView('department')" type="button">
+            Por Departamento
+          </button>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">filter_alt</span>
+<label class="sr-only" for="deptSelect">Selecione o Setor</label>
+<select class="bg-transparent font-title-md text-title-md text-on-surface outline-none cursor-pointer" id="deptSelect" onchange="filterAuditTable()">
+<option value="ALL">Todos os Departamentos</option>
+<option value="TI">TI &amp; Infraestrutura</option>
+<option value="LOG">Logística &amp; Armazenagem</option>
+<option value="ADM">Administrativo Central</option>
+<option value="COM">Comercial &amp; Vendas</option>
+<option value="OPS">Operações de Campo</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">calendar_today</span>
+<span class="font-body-md text-body-md text-on-surface">Mês Corrente: <strong>Março/2025</strong></span>
+</div>
+</div>
+<!-- Quick Toggles -->
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded accent-brand-alert-red cursor-pointer" id="toggleAnomaliesOnly" onchange="filterAuditTable()" type="checkbox">
+<span class="font-title-md text-title-md text-brand-alert-red font-semibold">Apenas Divergências &amp; Perdas</span>
+</label>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-space-2xs text-brand-blue-active">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="font-label-sm text-label-sm">Auditoria em Tempo Real</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid: Comparative Dashboards & Alerts -->
+<div class="w-full px-space-xl pb-space-lg flex flex-col gap-space-lg bg-surface-canvas">
+<!-- Top Executive KPIs Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1: Total Financeiro Desviado -->
+<div class="relative bg-surface-card rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-brand-alert-red"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Perda por Desvio / Sumiço</span>
+<span class="material-symbols-outlined text-brand-alert-red text-[20px]">search_off</span>
+</div>
+<div class="font-display-lg text-display-lg text-brand-alert-red mt-space-xs">R$ 48.920<span class="text-body-lg font-normal text-on-surface-variant">,50</span></div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-cream -mx-space-md -mb-space-md px-space-md py-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-brand-burgundy font-semibold">+18.4% vs mês anterior</span>
+<span class="font-code-mono text-code-mono text-xs text-brand-burgundy">142 itens pendentes</span>
+</div>
+</div>
+<!-- KPI 2: Perda por Vencimento (Descarte Obrigatório) -->
+<div class="relative bg-surface-card rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-status-warning"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Custo Vencimento Lotes</span>
+<span class="material-symbols-outlined text-status-warning text-[20px]">event_busy</span>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface mt-space-xs">R$ 13.450<span class="text-body-lg font-normal text-on-surface-variant">,00</span></div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-status-success font-semibold">-4.1% descarte de insumos</span>
+<span class="font-code-mono text-code-mono text-xs text-on-surface-variant">9 lotes expirados</span>
+</div>
+</div>
+<!-- KPI 3: Taxa Global de Divergência Físico x Lógico -->
+<div class="relative bg-surface-card rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-brand-navy"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Discrepância Média de Estoque</span>
+<span class="material-symbols-outlined text-brand-navy text-[20px]">balance</span>
+</div>
+<div class="font-display-lg text-display-lg text-brand-navy mt-space-xs">6.82%</div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-brand-alert-red font-semibold">Teto aceitável: &lt; 1.5%</span>
+
+</div>
+</div>
+<!-- KPI 4: Status Sindicâncias e Rastreabilidade -->
+<div class="relative bg-surface-card rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-brand-blue-active"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Processos de Auditoria</span>
+<span class="material-symbols-outlined text-brand-blue-active text-[20px]">assignment_late</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">11</span>
+<span class="font-title-md text-title-md text-on-surface-variant">ativas no mês</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-brand-blue-active font-semibold">3 enviadas à Diretoria</span>
+
+</div>
+</div>
+</div>
+<!-- Comparative Visual Panels (Bento Section) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Panel 1: Desvio por Departamento (%) - 4 Cols -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Índice de Desvio por Setor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">% de itens sumidos vs total requisitado</p>
+</div>
+<span class="px-2 py-1 rounded bg-error-container text-brand-alert-red font-label-sm text-label-sm font-semibold">Crítico</span>
+</div>
+<!-- Department Bars -->
+<div class="flex flex-col gap-space-md mt-space-md">
+<!-- TI -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-alert-red"></span>
+<span class="font-title-md text-title-md text-on-surface">TI &amp; Infraestrutura</span>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-brand-alert-red">14.8%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-brand-alert-red rounded-full" style="width: 74%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 block">Cabos ópticos, memórias RAM, cartuchos laser</span>
+</div>
+<!-- Logística -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-burgundy"></span>
+<span class="font-title-md text-title-md text-on-surface">Logística &amp; Almoxarifado</span>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-brand-burgundy">8.4%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-brand-burgundy rounded-full" style="width: 42%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 block">Fitas de embalagem, paletes térmicos, EPIs</span>
+</div>
+<!-- Operações -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-status-warning"></span>
+<span class="font-title-md text-title-md text-on-surface">Operações de Campo</span>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-on-surface">4.2%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-status-warning rounded-full" style="width: 21%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 block">Ferramentas de precisão, baterias 12V</span>
+</div>
+<!-- Administrativo -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-status-success"></span>
+<span class="font-title-md text-title-md text-on-surface">Administrativo Central</span>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-status-success">1.1%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-status-success rounded-full" style="width: 8%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 block">Material de expediente e insumos de copa</span>
+</div>
+<!-- Comercial -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-title-md text-title-md text-on-surface">Comercial &amp; Vendas</span>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-secondary">0.6%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 4%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 block">Brindes corporativos e kits de apresentação</span>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Panel 2: Custos de Vencimento vs Sumiço Injustificado (SVG Comparison) - 4 Cols -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vencimento vs. Sumiço</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparativo de prejuízo financeiro acumulado</p>
+</div>
+<span class="font-code-mono text-code-mono text-xs bg-surface-container px-2 py-1 rounded text-primary-container font-semibold">Q1-2025</span>
+</div>
+<!-- SVG Donut & Dual Comparison -->
+<div class="flex flex-col items-center justify-center my-space-sm">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+<!-- Background track -->
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<!-- Vencimento Arc (21.5%) -> 21.5% of 100 -->
+<path class="text-status-warning" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="21.5, 100" stroke-width="4.5"></path>
+<!-- Sumiço Injustificado Arc (78.5%) offset -->
+<path class="text-brand-alert-red" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="78.5, 100" stroke-dashoffset="-21.5" stroke-width="4.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Prejuízo Total</span>
+<span class="font-title-lg text-title-lg text-brand-navy font-bold">R$ 62.370</span>
+<span class="font-label-sm text-label-sm text-brand-alert-red font-semibold">78.5% Desvio</span>
+</div>
+</div>
+</div>
+<!-- Breakdown Ledger -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-cream">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-brand-alert-red"></span>
+<div>
+<span class="font-title-md text-title-md text-brand-burgundy font-semibold block">Sumiço Injustificado (Desvio)</span>
+<span class="font-label-sm text-label-sm text-brand-burgundy">Furto, perda de inventário ou saída sem baixa</span>
+</div>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-brand-alert-red">R$ 48.920,50</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-status-warning"></span>
+<div>
+<span class="font-title-md text-title-md text-on-surface font-semibold block">Vencimento de Lotes</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Produtos expirados em prateleira</span>
+</div>
+</div>
+<span class="font-code-mono text-code-mono font-bold text-on-surface">R$ 13.450,00</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md text-right">
+<a class="font-label-sm text-label-sm text-brand-blue-active font-semibold hover:underline inline-flex items-center gap-1" href="#">
+<span class="">Ver demonstrativo contábil detalhado</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Panel 3: Alertas de Auditoria & Recorrência - 4 Cols -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-brand-alert-red text-[20px]">notifications_active</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Alertas de Auditoria</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-brand-alert-red text-on-error font-label-sm text-[10px] font-bold">3 CRÍTICOS</span>
+</div>
+
+<!-- Notification Cards List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Alert 1 (TI Recidivism) -->
+<div class="bg-surface-cream rounded-lg p-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-alert-red"></div>
+<div class="flex items-start justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-brand-burgundy uppercase">Discrepância Recorrente (3ª Vez)</span>
+<span class="font-code-mono text-[10px] text-brand-alert-red font-bold">ALERTA #A94</span>
+</div>
+
+<div class="flex items-center gap-space-sm mt-space-xs">
+<span class="font-code-mono text-code-mono text-xs text-brand-alert-red font-bold">-28 unidades</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Impacto: R$ 14.890,00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert 2 (Logistics Pallets) -->
+<div class="bg-surface-container-low rounded-lg p-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-burgundy"></div>
+<div class="flex items-start justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-brand-navy uppercase">Falta sem Baixa no Sistema</span>
+<span class="font-code-mono text-[10px] text-on-surface-variant font-bold">ALERTA #A87</span>
+</div>
+
+<div class="flex items-center gap-space-sm mt-space-xs">
+<span class="font-code-mono text-code-mono text-xs text-brand-burgundy font-bold">-45 bobinas</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Setor: Logística</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert 3 (Expired Batches Ignored) -->
+<div class="bg-surface-container-low rounded-lg p-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-status-warning"></div>
+<div class="flex items-start justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase">Risco de Vencimento Silencioso</span>
+<span class="font-code-mono text-[10px] text-on-surface-variant font-bold">ALERTA #A81</span>
+</div>
+
+<div class="flex items-center gap-space-sm mt-space-xs">
+<span class="font-code-mono text-code-mono text-xs text-on-surface font-bold">Vence em 14 dias</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Setor: Operações</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="w-full py-2 bg-primary-container text-on-primary rounded-lg font-title-md text-title-md hover:bg-brand-navy shadow-sm transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span class="">Instaurar Sindicância Conjunta</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Evidence & Investigation Spotlights -->
+
+<!-- Complete Row Level Security & Audit Table Section -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Filter Bar & Header -->
+<div class="p-space-md bg-surface-card flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">verified_user</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tabela de Auditoria e Rastreabilidade Completa</h2>
+</div>
+
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto">
+<!-- Live search input -->
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-card" id="auditSearchInput" onkeyup="filterAuditTable()" placeholder="Buscar por ID, item ou responsável..." type="text">
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container transition-all" onclick="resetAuditFilters()" type="button">
+            Limpar Filtros
+          </button>
+</div>
+</div>
+<!-- Table Content Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse" id="auditTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider h-11">
+<th class="px-space-md py-space-xs font-semibold">ID Auditoria</th>
+<th class="px-space-md py-space-xs font-semibold">Data / Hora</th>
+<th class="px-space-md py-space-xs font-semibold">Departamento Auditado</th>
+<th class="px-space-md py-space-xs font-semibold">Item Auditado</th>
+<th class="px-space-md py-space-xs font-semibold text-right">Qtd Teórica</th>
+<th class="px-space-md py-space-xs font-semibold text-right">Qtd Física</th>
+<th class="px-space-md py-space-xs font-semibold text-center">Divergência (+/-)</th>
+<th class="px-space-md py-space-xs font-semibold text-right">Impacto Total (R$)</th>
+<th class="px-space-md py-space-xs font-semibold">Responsável pelo Setor</th>
+<th class="px-space-md py-space-xs font-semibold">Status Investigação</th>
+<th class="px-space-md py-space-xs font-semibold text-center">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-md text-body-md">
+<!-- Row 1: High alert missing cables TI -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-cream" data-dept="TI" data-divergence="true">
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-brand-burgundy font-bold">#AUD-2025-091</td>
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-xs text-on-surface">17/03/2025 09:42</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-brand-burgundy text-on-tertiary font-label-sm text-label-sm font-semibold">TI &amp; Infra</span>
+</td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Cabo Óptico Monomodo 50m</span></td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono">60 un</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-alert-red">32 un</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono font-bold text-brand-alert-red px-2 py-0.5 rounded bg-error-container">
+                  -28 un (-46.6%)
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-alert-red">
+                R$ 14.840,00
+              </td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Rodrigo F. Albuquerque</span></td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded bg-surface-cream text-brand-burgundy font-title-md text-title-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-brand-alert-red"></span>
+                  Sindicância Aberta
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high transition-colors" onclick="openAuditDossier('AUD-2025-091')" title="Abrir Dossiê Completo" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Toner Cartridge TI -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-cream" data-dept="TI" data-divergence="true">
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-brand-burgundy font-bold">#AUD-2025-088</td>
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-xs text-on-surface">16/03/2025 15:10</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-brand-burgundy text-on-tertiary font-label-sm text-label-sm font-semibold">TI &amp; Infra</span>
+</td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Toner Laser HP 89X</span></td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono">15 un</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-alert-red">03 un</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono font-bold text-brand-alert-red px-2 py-0.5 rounded bg-error-container">
+                  -12 un (-80.0%)
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-alert-red">
+                R$ 13.080,00
+              </td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Rodrigo F. Albuquerque</span></td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded bg-surface-container-high text-brand-blue-active font-title-md text-title-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-brand-blue-active"></span>
+                  Em análise pela Controladoria
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high transition-colors" onclick="openAuditDossier('AUD-2025-088')" title="Abrir Dossiê Completo" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Bobina Logistica -->
+<tr class="hover:bg-surface-container-low transition-colors" data-dept="LOG" data-divergence="true">
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-primary font-bold">#AUD-2025-084</td>
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-xs text-on-surface">15/03/2025 11:20</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">Logística</span>
+</td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Fita Térmica de Lacração 100m</span></td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono">180 un</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono text-brand-burgundy font-bold">135 un</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono font-bold text-brand-burgundy px-2 py-0.5 rounded bg-surface-cream">
+                  -45 un (-25.0%)
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-burgundy">
+                R$ 5.400,00
+              </td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Marcos Valério Santos</span></td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded bg-surface-container-high text-brand-blue-active font-title-md text-title-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-brand-blue-active"></span>
+                  Em análise pela Controladoria
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high transition-colors" onclick="openAuditDossier('AUD-2025-084')" title="Abrir Dossiê Completo" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Operações - Quebra Aprovada -->
+<tr class="hover:bg-surface-container-low transition-colors" data-dept="OPS" data-divergence="true">
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-primary font-bold">#AUD-2025-079</td>
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-xs text-on-surface">14/03/2025 18:05</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Operações</span>
+</td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Alicate Prensa Terminais</span></td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono">10 un</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono text-on-surface font-bold">08 un</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono font-bold text-on-surface-variant px-2 py-0.5 rounded bg-surface-container">
+                  -02 un (-20.0%)
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-on-surface">
+                R$ 2.600,00
+              </td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Renata Guimarães</span></td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-title-md text-title-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  Aprovada perda por quebra
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high transition-colors" onclick="openAuditDossier('AUD-2025-079')" title="Abrir Dossiê Completo" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Administrativo - Sem Divergência (Normal) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-dept="ADM" data-divergence="false" style="display: none;">
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-primary font-bold">#AUD-2025-075</td>
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-xs text-on-surface">14/03/2025 10:15</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold">Administrativo</span>
+</td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Papel Sulfite A4 75g (Caixa c/ 10)</span></td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono">150 cx</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono text-status-success font-bold">150 cx</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono font-bold text-status-success px-2 py-0.5 rounded bg-surface-container-low">
+                  0 un (0.0%)
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-status-success">
+                R$ 0,00
+              </td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Camila Rocha</span></td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded bg-surface-container-low text-status-success font-title-md text-title-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+                  Conforme / Arquivado
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high transition-colors" onclick="openAuditDossier('AUD-2025-075')" title="Abrir Dossiê Completo" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: TI - Switch de Rede Summit Desaparecido -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-cream" data-dept="TI" data-divergence="true">
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-brand-burgundy font-bold">#AUD-2025-072</td>
+<td class="px-space-md py-space-sm font-code-mono text-code-mono text-xs text-on-surface">12/03/2025 16:50</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-brand-burgundy text-on-tertiary font-label-sm text-label-sm font-semibold">TI &amp; Infra</span>
+</td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Switch Gerenciável 24P PoE+</span></td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono">04 un</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-alert-red">02 un</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono font-bold text-brand-alert-red px-2 py-0.5 rounded bg-error-container">
+                  -02 un (-50.0%)
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right font-code-mono text-code-mono font-bold text-brand-alert-red">
+                R$ 18.000,00
+              </td>
+<td class="px-space-md py-space-sm"><span class="font-title-md text-title-md text-on-surface">Rodrigo F. Albuquerque</span></td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded bg-surface-cream text-brand-burgundy font-title-md text-title-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-brand-alert-red"></span>
+                  Sindicância Aberta
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-brand-navy hover:bg-surface-container-high transition-colors" onclick="openAuditDossier('AUD-2025-072')" title="Abrir Dossiê Completo" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination & Row-Level Security Ledger -->
+<div class="p-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm">
+
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded bg-surface-card text-on-surface font-title-md text-title-md shadow-sm disabled:opacity-50" type="button">Anterior</button>
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary font-title-md text-title-md shadow-sm" type="button">1</button>
+<button class="px-3 py-1 rounded bg-surface-card text-on-surface font-title-md text-title-md shadow-sm" type="button">2</button>
+<button class="px-3 py-1 rounded bg-surface-card text-on-surface font-title-md text-title-md shadow-sm" type="button">Próximo</button>
+</div>
+</div>
+</div>
+<!-- Executive Action & Governance Seal Strip -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-lg shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-card/10 backdrop-blur flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[28px] text-on-primary">verified</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary">Fechamento Mensal de Auditoria • Diretoria de Operações</h3>
+
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-lg py-space-sm rounded-lg bg-brand-alert-red text-on-error font-title-md text-title-md hover:bg-brand-burgundy shadow-sm transition-all flex items-center gap-space-xs" onclick="triggerClosureModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span class="">Travar Período &amp; Executar Fechamento</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro-Modal for Dossier Quick Look (JavaScript Driven) -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 hidden items-center justify-center p-space-md" id="dossierModal">
+<div class="bg-surface-card rounded-xl max-w-xl w-full p-space-lg shadow-xl relative animate-in fade-in zoom-in duration-150">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" onclick="closeAuditDossier()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-brand-alert-red text-[24px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modalTitle">Dossiê de Investigação</h3>
+</div>
+<div class="p-space-md bg-surface-cream rounded-lg mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-brand-burgundy uppercase font-bold">Resumo da Falta Físico x Lógico</span>
+<span class="font-code-mono text-xs font-bold text-brand-alert-red" id="modalDivergenceBadge">-28 Unidades</span>
+</div>
+<p class="font-body-md text-body-md text-brand-burgundy mt-space-xs" id="modalDescription">
+          Houve conferência dupla com testemunhas do departamento fiscal. O produto constava como em trânsito no Almoxarifado Central, contudo os pallets estavam violados.
+        </p>
+</div>
+<div class="space-y-2 mb-space-lg">
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant">Impacto Financeiro Líquido:</span>
+<span class="font-code-mono text-code-mono font-bold text-brand-alert-red" id="modalImpact">R$ 14.840,00</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant">Gestor Notificado:</span>
+<span class="font-title-md text-title-md text-on-surface" id="modalManager">Rodrigo F. Albuquerque (TI)</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Protocolo RLS / Hash:</span>
+<span class="font-code-mono text-xs text-brand-blue-active">SHA-88F924AB0012</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container" onclick="closeAuditDossier()" type="button">
+          Fechar Visualização
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-title-md text-title-md hover:bg-brand-navy" onclick="alert('Notificação formal e dossiê transmitidos à Diretoria Jurídica e RH.')" type="button">
+          Emitir Notificação Formal
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Scripting -->
+<script>
+    // Tab State Management
+    function setAuditView(view) {
+      const tabCorp = document.getElementById('tabCorporate');
+      const tabDept = document.getElementById('tabDepartment');
+      const deptSelect = document.getElementById('deptSelect');
+
+      if (view === 'corporate') {
+        tabCorp.className = "px-space-md py-1.5 rounded-md font-title-md text-title-md bg-primary-container text-on-primary shadow-sm transition-all";
+        tabDept.className = "px-space-md py-1.5 rounded-md font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all";
+        deptSelect.value = "ALL";
+      } else {
+        tabDept.className = "px-space-md py-1.5 rounded-md font-title-md text-title-md bg-primary-container text-on-primary shadow-sm transition-all";
+        tabCorp.className = "px-space-md py-1.5 rounded-md font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all";
+        if (deptSelect.value === 'ALL') {
+          deptSelect.value = 'TI';
+        }
+      }
+      filterAuditTable();
+    }
+
+    // Dynamic Client-side Filtering
+    function filterAuditTable() {
+      const dept = document.getElementById('deptSelect').value;
+      const onlyAnomalies = document.getElementById('toggleAnomaliesOnly').checked;
+      const searchTerm = document.getElementById('auditSearchInput').value.toLowerCase();
+
+      const rows = document.querySelectorAll('#auditTable tbody tr');
+
+      rows.forEach(row => {
+        const rowDept = row.getAttribute('data-dept');
+        const rowDivergence = row.getAttribute('data-divergence') === 'true';
+        const rowText = row.innerText.toLowerCase();
+
+        let matchesDept = (dept === 'ALL' || rowDept === dept);
+        let matchesAnomalies = (!onlyAnomalies || rowDivergence);
+        let matchesSearch = (!searchTerm || rowText.includes(searchTerm));
+
+        if (matchesDept && matchesAnomalies && matchesSearch) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function resetAuditFilters() {
+      document.getElementById('deptSelect').value = 'ALL';
+      document.getElementById('toggleAnomaliesOnly').checked = false;
+      document.getElementById('auditSearchInput').value = '';
+      setAuditView('corporate');
+      filterAuditTable();
+    }
+
+    // Modal Details Interactions
+    const mockDossiers = {
+      'AUD-2025-091': {
+        title: 'Dossiê de Investigação #AUD-2025-091',
+        divergence: '-28 un (-46.6%)',
+        desc: 'Falta crítica confirmada em inventário rotativo na gaiola de segurança. Insumo de alto valor com saída física desprovida de requisição registrada no ERP.',
+        impact: 'R$ 14.840,00',
+        manager: 'Rodrigo F. Albuquerque (TI & Infra)'
+      },
+      'AUD-2025-088': {
+        title: 'Dossiê de Investigação #AUD-2025-088',
+        divergence: '-12 un (-80.0%)',
+        desc: 'Consumo acelerado de cartuchos 89X sem incremento compatível de páginas impressas no parque corporativo. Auditoria em impressoras em andamento.',
+        impact: 'R$ 13.080,00',
+        manager: 'Rodrigo F. Albuquerque (TI & Infra)'
+      },
+      'AUD-2025-084': {
+        title: 'Dossiê de Investigação #AUD-2025-084',
+        divergence: '-45 un (-25.0%)',
+        desc: 'Conferência física no Galpão B acusou violação de caixas de fita de lacração térmica. Lote liberado antes da leitura do leitor ótico.',
+        impact: 'R$ 5.400,00',
+        manager: 'Marcos Valério Santos (Logística)'
+      },
+      'AUD-2025-079': {
+        title: 'Laudo de Quebra de Equipamento #AUD-2025-079',
+        divergence: '-02 un (-20.0%)',
+        desc: 'Alicates hidráulicos danificados em campo devido a torque excessivo em campo. Laudo técnico aprovado pela Diretoria para baixa por descarte.',
+        impact: 'R$ 2.600,00',
+        manager: 'Renata Guimarães (Operações)'
+      },
+      'AUD-2025-075': {
+        title: 'Auditoria de Rotina #AUD-2025-075',
+        divergence: '0 un (0.0%)',
+        desc: 'Contagem física 100% alinhada com saldo do banco de dados.',
+        impact: 'R$ 0,00',
+        manager: 'Camila Rocha (Administrativo)'
+      },
+      'AUD-2025-072': {
+        title: 'Dossiê de Incidente Grave #AUD-2025-072',
+        divergence: '-02 un (-50.0%)',
+        desc: 'Desaparecimento físico de 2 Switches Cisco lacrados no rack do datacenter. Controle de acesso por biometria solicitado para perícia.',
+        impact: 'R$ 18.000,00',
+        manager: 'Rodrigo F. Albuquerque (TI & Infra)'
+      }
+    };
+
+    function openAuditDossier(id) {
+      const data = mockDossiers[id];
+      if (!data) return;
+
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDivergenceBadge').innerText = data.divergence;
+      document.getElementById('modalDescription').innerText = data.desc;
+      document.getElementById('modalImpact').innerText = data.impact;
+      document.getElementById('modalManager').innerText = data.manager;
+
+      const modal = document.getElementById('dossierModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeAuditDossier() {
+      const modal = document.getElementById('dossierModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function triggerClosureModal() {
+      if (confirm('Atenção: A consolidação do fechamento mensal de auditoria congelará os saldos auditados com selo digital criptográfico. Confirmar operação?')) {
+        alert('Fechamento de Auditoria executado com sucesso. Protocolo corporativo #FECH-MAR-2025-01 arquivado no RLS.');
+      }
+    }
+
+    // Export Feedback
+    document.getElementById('btnExportPdf').addEventListener('click', () => {
+      alert('Gerando Relatório Consolidado Executivo em PDF com carimbo de governança...');
+    });
+
+    document.getElementById('btnExportCsv').addEventListener('click', () => {
+      alert('Exportando base de dados brutos (CSV/Excel) com integridade referencial mantida...');
+    });
+
+    // Run initial filter on load
+    filterAuditTable();
+  </script>
+</div></main></div>
+
+</body></html>
