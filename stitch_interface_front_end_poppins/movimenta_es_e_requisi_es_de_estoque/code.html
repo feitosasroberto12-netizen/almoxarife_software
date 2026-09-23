@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#02000d", "tertiary-fixed-dim": "#ffb4a7", "tertiary-fixed": "#ffdad4", "on-tertiary-container": "#f14530", "tertiary": "#070000", "surface-tint": "#6351a7", "surface-canvas": "#F8FAFC", "surface-container-high": "#dee8ff", "on-error-container": "#93000a", "on-primary-fixed": "#1e0060", "surface-dim": "#cfdaf2", "brand-alert-red": "#D73220", "brand-navy": "#1F0062", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#ccbeff", "surface-container": "#e7eeff", "on-primary-fixed-variant": "#4b388d", "on-surface-variant": "#484551", "on-surface": "#111c2d", "secondary-fixed": "#cce5ff", "brand-blue-active": "#0B78B3", "on-tertiary": "#ffffff", "surface-card": "#FFFFFF", "on-error": "#ffffff", "on-primary-container": "#8977d1", "on-tertiary-fixed": "#400100", "surface-container-low": "#f0f3ff", "border-subtle": "#E2E8F0", "on-secondary": "#ffffff", "secondary-fixed-dim": "#92ccff", "outline-variant": "#cac4d3", "status-warning": "#EAB308", "secondary": "#006497", "on-tertiary-fixed-variant": "#920500", "background": "#f9f9ff", "inverse-surface": "#263143", "surface": "#f9f9ff", "on-primary": "#ffffff", "secondary-container": "#6fc0ff", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ecf1ff", "surface-cream": "#F9ECE5", "brand-burgundy": "#68150A", "tertiary-container": "#420100", "inverse-primary": "#ccbeff", "surface-bright": "#f9f9ff", "surface-variant": "#d8e3fb", "error-container": "#ffdad6", "primary-container": "#1f0062", "status-success": "#059669", "surface-container-lowest": "#ffffff", "outline": "#797582", "on-background": "#111c2d", "primary-fixed": "#e7deff", "error": "#ba1a1a", "surface-container-highest": "#d8e3fb", "on-secondary-container": "#004d76" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "space-2xl": "3rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Poppins"], "body-md": ["Poppins"], "headline-md": ["Poppins"], "label-md": ["Poppins"], "display-lg-mobile": ["Poppins"], "title-md": ["Poppins"], "label-sm": ["Poppins"], "label-lg": ["Poppins"], "body-lg": ["Poppins"], "title-lg": ["Poppins"], "headline-sm": ["Poppins"], "code-mono": ["JetBrains Mono"], "headline-lg-mobile": ["Poppins"], "display-lg": ["Poppins"], "headline-lg": ["Poppins"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "30px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "title-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "title-lg": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "code-mono": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Logo Corporativo" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VvL7DFueA5jjjsnDOavZ_c3m88WZDAucbSOpbgQ-y06kpHK3E9erB-dPiYk0DPXECnoHQnqtzp9BKZj09SDs9taQLSfNQwG5JpWgl4OpqTlKCcoFDQi6F1VyniI9SHN_bkSjZBxpzmvO0J3nzxO0QrgDi_-EwSZT4MbpeoQunP1W7ets4xqy9fES_L44G5YekQFUCtEMaFCaXPrO4q9C_1hpAsoy9K0uUvG-CW9nlCqDhzLDOOEMa13b8pvKC8g_CAL3MODcv6ZA"><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-brand-navy truncate">Software &amp; Soluções</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Almoxarifado &amp; Gestão</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Menu Principal</span></div><nav class="flex flex-col gap-space-2xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-title-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-executivo" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span class="font-body-md text-body-md">Dashboard Executivo</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="gestao-de-insumos-e-lotes" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Gestão de Insumos &amp; Lotes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="movimentacoes-de-estoque" href="#"><span class="material-symbols-outlined text-[20px]">swap_horizontal_circle</span><span class="font-body-md text-body-md">Movimentações de Estoque</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="auditoria-e-relatorios" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Auditoria &amp; Relatórios</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">domain</span><select class="bg-transparent font-label-md text-label-md text-on-surface outline-none cursor-pointer pr-space-xs"><option value="all">Todos os Departamentos</option><option value="eng">Engenharia de Software</option><option value="ops">Operações &amp; Infraestrutura</option><option value="fin">Diretoria &amp; Controladoria</option><option value="adm">Administrativo / Almoxarifado</option></select></div><div class="hidden lg:flex items-center gap-space-2xs bg-surface-cream px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-brand-burgundy text-[16px]">shield</span><span class="font-label-sm text-label-sm text-brand-burgundy">Governança Corporativa</span></div></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-margin flex flex-col gap-space-xl">
+<!-- Top Action Banner & Quick Trigger Bar -->
+<section class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-2xs">
+
+<h1 class="font-headline-lg text-headline-lg text-brand-navy tracking-tight">Movimentações de Estoque</h1>
+
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm w-full xl:w-auto">
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs bg-brand-navy text-on-primary font-title-md text-title-md px-space-md py-space-sm rounded-lg hover:brightness-110 transition-all shadow-sm" id="btn-open-entry" type="button">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+<span class="">+ Nova Entrada</span>
+</button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs bg-brand-blue-active text-on-secondary font-title-md text-title-md px-space-md py-space-sm rounded-lg hover:brightness-110 transition-all shadow-sm" id="btn-open-requisition" type="button">
+<span class="material-symbols-outlined text-[20px]">call_made</span>
+<span class="">↗ Nova Saída / Requisição</span>
+</button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs bg-brand-alert-red text-on-error font-title-md text-title-md px-space-md py-space-sm rounded-lg hover:brightness-110 transition-all shadow-sm" id="btn-open-loss" type="button"><span class="material-symbols-outlined text-[20px]">warning</span><span class="">Registrar Descarte / Perda</span></button>
+</div>
+</section>
+<!-- Mini-Dashboard: Daily Flow Scorecards -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-gutter">
+<!-- Card: Entradas de Hoje -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-brand-navy"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Entradas Registradas Hoje</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-code-mono font-bold text-headline-lg text-on-surface">R$ 18.400</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 12 lotes</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-brand-navy">
+<span class="material-symbols-outlined text-[24px]">archive</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-2xs text-status-success">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-label-sm text-label-sm font-semibold">+18.5% vs ontem</span>
+</div>
+<span class="font-code-mono text-label-sm text-on-surface-variant">100% c/ NFe validada</span>
+</div>
+</div>
+<!-- Card: Requisições Atendidas -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-brand-blue-active"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Requisições Atendidas</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">48</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">retiradas físicas</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-brand-blue-active font-semibold">4 Departamentos Ativos</span>
+<span class="font-code-mono text-label-sm text-on-surface-variant">Média: 6.2 min/pedido</span>
+</div>
+</div>
+<!-- Card: Descartes / Quebras Registrados -->
+<div class="relative bg-surface-cream p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-brand-alert-red"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-brand-burgundy uppercase tracking-wider font-semibold">Descartes / Quebras Críticas</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-display-lg text-display-lg font-bold text-brand-alert-red">2</span>
+<span class="font-label-sm text-label-sm text-brand-burgundy font-semibold">ocorrências registradas</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-error-container text-brand-alert-red">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+</div>
+
+</div>
+</section>
+<!-- Operational Workflow: Split Panel (Form & Real-time Visualizer) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-gutter">
+<!-- Panel 1: Fast Transaction Form (Registro Rápido de Movimentação) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-brand-navy text-[20px]">edit_note</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Registro Rápido de Movimentação</h2>
+</div>
+
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-2xs rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-mono">ALMOXARIFADO-CENTRAL</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-md" id="mov-form">
+<!-- Flow Type Selector -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-2xs">
+              Tipo de Movimento
+              <span class="text-brand-alert-red">*</span>
+</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-space-xs">
+<label class="cursor-pointer flex flex-col items-center justify-center p-space-sm rounded-lg hover:bg-surface-container transition-all text-center bg-primary-container text-on-primary">
+<input checked="" class="sr-only" name="mov_type" type="radio" value="entry">
+<span class="material-symbols-outlined text-[22px] text-status-success mb-space-2xs">login</span>
+<span class="font-label-sm text-label-sm font-semibold">Entrada Geral</span>
+</label>
+<label class="cursor-pointer flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all text-center">
+<input class="sr-only" name="mov_type" type="radio" value="requisition">
+<span class="material-symbols-outlined text-[22px] text-brand-blue-active mb-space-2xs">output</span>
+<span class="font-label-sm text-label-sm font-semibold">Saída / Depto</span>
+</label>
+<label class="cursor-pointer flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all text-center">
+<input class="sr-only" name="mov_type" type="radio" value="loss_exp">
+<span class="material-symbols-outlined text-[22px] text-brand-alert-red mb-space-2xs">event_busy</span>
+<span class="font-label-sm text-label-sm font-semibold">Vencimento</span>
+</label>
+<label class="cursor-pointer flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all text-center">
+<input class="sr-only" name="mov_type" type="radio" value="loss_dmg">
+<span class="material-symbols-outlined text-[22px] text-brand-burgundy mb-space-2xs">broken_image</span>
+<span class="font-label-sm text-label-sm font-semibold">Quebra / Dano</span>
+</label>
+<label class="cursor-pointer flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all text-center">
+<input class="sr-only" name="mov_type" type="radio" value="loss_unjustified">
+<span class="material-symbols-outlined text-[22px] text-error mb-space-2xs">remove_moderator</span>
+<span class="font-label-sm text-label-sm font-semibold">Falta Injustificada</span>
+</label>
+</div>
+</div>
+<!-- Supply & Batch Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="insumo-select">Insumo / Item</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">inventory_2</span>
+<select class="w-full h-11 pl-10 pr-4 bg-surface-canvas rounded-lg font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-lowest" id="insumo-select">
+<option value="INS-401">Resina Polimérica UV Pro 1000ml (Disp: 48 un)</option>
+<option value="INS-402">Fita Filamentos 50mm Industrial (Disp: 180 rl)</option>
+<option value="INS-403">Solvente Isopropanol 99.8% 5L (Disp: 14 gl)</option>
+<option value="INS-404">Filamento PLA Tough Navy 1kg (Disp: 82 un)</option>
+<option value="INS-405">Kit Conectores Ouro RJ45 Blindado (Disp: 450 un)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="lote-select">Lote &amp; Validade Vinculada</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">barcode_scanner</span>
+<select class="w-full h-11 pl-10 pr-4 bg-surface-canvas rounded-lg font-code-mono text-body-md text-on-surface outline-none focus:bg-surface-container-lowest" id="lote-select">
+<option value="LOTE-2024-884">LT-88401 • Val: 15/04/2025 (48 un)</option>
+<option value="LOTE-2024-889">LT-88910 • Val: 28/11/2024 [CRÍTICO 12d]</option>
+<option value="LOTE-2024-901">LT-90112 • Val: 10/08/2026 (120 un)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Quantity & Department Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="mov-qtd">Quantidade a Movimentar</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md bg-surface-canvas rounded-lg font-code-mono text-body-md text-on-surface outline-none focus:bg-surface-container-lowest" id="mov-qtd" max="500" min="1" type="number" value="4">
+<span class="absolute right-4 font-label-sm text-label-sm text-on-surface-variant uppercase font-code-mono">Unidades</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="depto-dest">Centro de Custo / Solicitante</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">badge</span>
+<select class="w-full h-11 pl-10 pr-4 bg-surface-canvas rounded-lg font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-lowest" id="depto-dest">
+<option value="ops">Operações &amp; Infraestrutura (Resp: Marcio Leite)</option>
+<option value="eng">Engenharia de Software (Resp: Ana Clara Rios)</option>
+<option value="fin">Diretoria &amp; Controladoria (Resp: Carlos Mendes)</option>
+<option value="almox">Almoxarifado Central (Ajuste Interno)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Mandatory Justification (RF03 Requirement) -->
+<div class="flex flex-col gap-space-2xs p-space-md rounded-xl bg-surface-container-low" id="justificativa-wrapper">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-brand-burgundy font-bold flex items-center gap-space-xs" for="justificativa-input"><span class="material-symbols-outlined text-[18px]">gavel</span><span class="">Justificativa &amp; Motivo</span></label>
+
+</div>
+<textarea class="w-full p-space-sm bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface outline-none focus:shadow-sm resize-none" id="justificativa-input" placeholder="Motivo, nº da requisição ou laudo de avaria..." rows="2"></textarea>
+</div>
+<!-- File Attachment (Evidence) & Form Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<label class="cursor-pointer flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">attach_file</span>
+<span class="font-label-md text-label-md">Anexar Laudo / Foto / NF</span>
+<input class="sr-only" type="file">
+</label>
+
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:bg-surface-container transition-colors" type="reset">
+                Limpar
+              </button>
+<button class="flex items-center justify-center gap-space-xs bg-brand-navy text-on-primary font-title-md text-title-md px-space-lg py-space-sm rounded-lg hover:brightness-125 transition-all shadow-sm" id="btn-submit-movement" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">Processar Movimento</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- Panel 2: Live Stock Context & Visual Ledger Preview -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Photographic Material Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-44 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up high-tech industrial manufacturing supplies neatly arranged in numbered warehouse racks with clean lighting and blue labels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjgxO3CQmXQYUjnl_Cb3pD6qB79D79xt1SZhCj2mjhkcq1WxgYp7gTyWUAl8l1HRmwmprbeMC25DLLcOzLBWz_VXBAy0T1wjtMYLovtF9jAqTiUL75wUy962lkK7bjvP7rU5--1u_pMrbDzn9nn9tc-3W5LNb8GHvalCNcXbN7EXbbiWveWeY-U6EKaHZRroc8OyjWN0eRAbh_3NxksvMlu7EmMiu_bxlVKdanzF8r3UBhrZtFhE6T4A">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-primary">
+<span class="font-label-sm text-label-sm uppercase font-code-mono text-secondary-fixed">Localização Física</span>
+<h3 class="font-title-lg text-title-lg">Corredor C-04 • Prateleira 2</h3>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Nível de Segurança</span>
+<span class="font-label-sm text-label-sm font-semibold text-status-success">Estoque Seguro (84%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-status-success rounded-full" style="width: 84%;"></div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs font-code-mono text-body-sm">
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lead Time Médio</span>
+<span class="font-semibold text-on-surface">3.5 Dias</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Custo Unitário</span>
+<span class="font-semibold text-on-surface">R$ 142,50</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance & SLA Mini Widget -->
+
+</div>
+</section>
+<!-- Real-Time Transaction Ledger (Histórico de Movimentações Recentes) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-2xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-brand-navy text-[20px]">receipt_long</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Histórico de Movimentações</h2>
+</div>
+
+</div>
+<!-- Filter Controls -->
+<div class="flex items-center gap-space-xs">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[16px]">filter_list</span>
+<select class="h-9 pl-9 pr-4 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface outline-none cursor-pointer">
+<option value="all">Todas as Ocorrências</option>
+<option value="entry">Somente Entradas</option>
+<option value="req">Somente Requisições</option>
+<option value="loss">Somente Perdas / Descartes</option>
+</select>
+</div>
+<button class="flex items-center gap-space-2xs h-9 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" title="Exportar Log" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="hidden sm:inline">CSV / Audit</span>
+</button>
+</div>
+</div>
+<!-- Table Wrapper with Architectural Rhythm -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-canvas text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Hora • Protocolo</th>
+<th class="py-space-sm px-space-md">Operador</th>
+<th class="py-space-sm px-space-md">Tipo</th>
+<th class="py-space-sm px-space-md">Insumo / Lote</th>
+<th class="py-space-sm px-space-md text-right">Qtd</th>
+<th class="py-space-sm px-space-md">Depto / Destino</th>
+<th class="py-space-sm px-space-md rounded-r-lg">Justificativa • Observação</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0">
+<!-- Row 1: Loss Alert (Red Accented Bar) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest shadow-[inset_4px_0_0_#D73220]">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono font-bold text-on-surface">15:42:19</span>
+<span class="font-code-mono text-label-sm text-brand-alert-red font-semibold">#MOV-2024-9982</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-2xs">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-code-mono text-[10px] font-bold text-brand-navy">ML</div>
+<span class="font-title-md text-on-surface">Marcio Leite</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-error-container text-brand-burgundy font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-alert-red"></span> Perda / Descarte
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col min-w-[180px]">
+<span class="font-semibold text-on-surface">Solvente Isopropanol 99.8% 5L</span>
+<span class="font-code-mono text-label-sm text-on-surface-variant">Lote: LT-88910 (Venc: 28/11/24)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-code-mono font-bold text-brand-alert-red whitespace-nowrap">
+                -2 gl
+              </td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-block px-space-xs py-space-2xs rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">
+                  Operações &amp; Infra
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<p class="text-body-sm text-on-surface leading-tight max-w-xs truncate" title="Galão apresentou fissura na válvula durante transporte interno; descarte preventivo protocolado.">
+                  Galão apresentou fissura na válvula durante transporte interno; descarte preventivo protocolado.
+                </p>
+</td>
+</tr>
+<!-- Row 2: Standard Output (Requisition in Electric Blue) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-canvas">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono font-bold text-on-surface">15:20:04</span>
+<span class="font-code-mono text-label-sm text-brand-blue-active font-semibold">#MOV-2024-9981</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-2xs">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-code-mono text-[10px] font-bold text-brand-navy">AC</div>
+<span class="font-title-md text-on-surface">Ana Clara Rios</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-blue-active"></span> Saída / Req
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col min-w-[180px]">
+<span class="font-semibold text-on-surface">Resina Polimérica UV Pro 1000ml</span>
+<span class="font-code-mono text-label-sm text-on-surface-variant">Lote: LT-88401 (Val: 15/04/25)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-code-mono font-bold text-brand-blue-active whitespace-nowrap">
+                -4 un
+              </td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-block px-space-xs py-space-2xs rounded-full bg-surface-container text-brand-navy font-label-sm text-label-sm font-semibold">
+                  Engenharia de Software
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<p class="text-body-sm text-on-surface leading-tight max-w-xs truncate" title="Prototipagem de carcaças IoT para sensor de telemetria externa v2.">
+                  Prototipagem de carcaças IoT para sensor de telemetria externa v2.
+                </p>
+</td>
+</tr>
+<!-- Row 3: Entry (Green Accented Tone) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono font-bold text-on-surface">14:05:51</span>
+<span class="font-code-mono text-label-sm text-status-success font-semibold">#MOV-2024-9980</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-2xs">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-code-mono text-[10px] font-bold text-brand-navy">CM</div>
+<span class="font-title-md text-on-surface">Carlos Mendes</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container-high text-brand-navy font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Entrada / NF
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col min-w-[180px]">
+<span class="font-semibold text-on-surface">Kit Conectores Ouro RJ45</span>
+<span class="font-code-mono text-label-sm text-on-surface-variant">Lote: LT-90112 (Val: 10/08/26)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-code-mono font-bold text-status-success whitespace-nowrap">
+                +200 un
+              </td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-block px-space-xs py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                  Almoxarifado Geral
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<p class="text-body-sm text-on-surface leading-tight max-w-xs truncate" title="Recebimento Fornecedor FastNet Brasil • NF-e 44921 • Conferência 100% OK.">
+                  Recebimento Fornecedor FastNet Brasil • NF-e 44921 • Conferência 100% OK.
+                </p>
+</td>
+</tr>
+<!-- Row 4: Another Loss Event (Critical Breakage) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest shadow-[inset_4px_0_0_#D73220]">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono font-bold text-on-surface">11:15:30</span>
+<span class="font-code-mono text-label-sm text-brand-alert-red font-semibold">#MOV-2024-9979</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-2xs">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-code-mono text-[10px] font-bold text-brand-navy">ML</div>
+<span class="font-title-md text-on-surface">Marcio Leite</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-error-container text-brand-burgundy font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-alert-red"></span> Quebra Acidental
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col min-w-[180px]">
+<span class="font-semibold text-on-surface">Filamento PLA Tough Navy 1kg</span>
+<span class="font-code-mono text-label-sm text-on-surface-variant">Lote: LT-88220 (Val: 04/01/26)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-code-mono font-bold text-brand-alert-red whitespace-nowrap">
+                -1 carretel
+              </td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="inline-block px-space-xs py-space-2xs rounded-full bg-surface-cream text-brand-burgundy font-label-sm text-label-sm font-semibold">
+                  Engenharia de Software
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<p class="text-body-sm text-on-surface leading-tight max-w-xs truncate" title="Queda durante empilhamento na gaveta modular 3B; carretel quebrado impossibilitando giro.">
+                  Queda durante empilhamento na gaveta modular 3B; carretel quebrado impossibilitando giro.
+                </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination and Ledger Status Summary -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs border-t-0">
+<span class="font-code-mono text-label-sm text-on-surface-variant">Exibindo 4 de 128 movimentações registradas nas últimas 24h</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface disabled:opacity-50" disabled="" type="button">
+            Anterior
+          </button>
+<span class="font-code-mono text-label-sm px-space-xs text-brand-navy font-bold">Pág. 1 / 32</span>
+<button class="px-space-sm py-space-xs bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+            Próxima
+          </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    const radioInputs = document.querySelectorAll('input[name="mov_type"]');
+    const justificativaWrapper = document.getElementById('justificativa-wrapper');
+    const submitBtn = document.getElementById('btn-submit-movement');
+    const justInput = document.getElementById('justificativa-input');
+
+    // Quick Action Bar Bindings to form
+    const btnEntry = document.getElementById('btn-open-entry');
+    const btnReq = document.getElementById('btn-open-requisition');
+    const btnLoss = document.getElementById('btn-open-loss');
+
+    function updateFormMode(val) {
+      radioInputs.forEach(r => {
+        const label = r.closest('label');
+        if (r.value === val) {
+          r.checked = true;
+          label.classList.add('bg-primary-container', 'text-on-primary');
+          label.classList.remove('bg-surface-container-low', 'text-on-surface');
+        } else {
+          label.classList.remove('bg-primary-container', 'text-on-primary');
+          label.classList.add('bg-surface-container-low', 'text-on-surface');
+        }
+      });
+
+      if (val.startsWith('loss')) {
+        justificativaWrapper.classList.add('bg-surface-cream');
+        justificativaWrapper.classList.remove('bg-surface-container-low');
+        justInput.setAttribute('required', 'true');
+        justInput.focus();
+      } else {
+        justificativaWrapper.classList.remove('bg-surface-cream');
+        justificativaWrapper.classList.add('bg-surface-container-low');
+        justInput.removeAttribute('required');
+      }
+    }
+
+    radioInputs.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        updateFormMode(e.target.value);
+      });
+    });
+
+    if (btnEntry) {
+      btnEntry.addEventListener('click', () => {
+        updateFormMode('entry');
+        window.scrollTo({ top: 380, behavior: 'smooth' });
+      });
+    }
+
+    if (btnReq) {
+      btnReq.addEventListener('click', () => {
+        updateFormMode('requisition');
+        window.scrollTo({ top: 380, behavior: 'smooth' });
+      });
+    }
+
+    if (btnLoss) {
+      btnLoss.addEventListener('click', () => {
+        updateFormMode('loss_exp');
+        window.scrollTo({ top: 380, behavior: 'smooth' });
+      });
+    }
+
+    // Set initial active state styling
+    updateFormMode('entry');
+
+    // Submit Validation Micro-interaction
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        const activeType = document.querySelector('input[name="mov_type"]:checked').value;
+        if (activeType.startsWith('loss') && !justInput.value.trim()) {
+          justInput.classList.add('bg-error-container');
+          justInput.focus();
+          alert('Atenção: A justificativa técnica é estritamente obrigatória para registro de perda/descarte conforme RF03.');
+          return;
+        }
+
+        justInput.classList.remove('bg-error-container');
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Gravando RLS...</span>';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Movimentação Concluída!</span>';
+          submitBtn.classList.remove('bg-brand-navy');
+          submitBtn.classList.add('bg-status-success');
+
+          setTimeout(() => {
+            submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span>Processar Movimento</span>';
+            submitBtn.classList.remove('bg-status-success');
+            submitBtn.classList.add('bg-brand-navy');
+            submitBtn.disabled = false;
+            document.getElementById('mov-form').reset();
+            updateFormMode('entry');
+          }, 2000);
+        }, 900);
+      });
+    }
+  })();
+</script></main></div>
+
+</body></html>
